@@ -1,0 +1,38 @@
+﻿<Window x:Class="IdilliaKP.zakaz"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:IdilliaKP"
+         WindowStartupLocation="CenterScreen"
+        mc:Ignorable="d"
+        Title="zakaz" Height="450" Width="800" Activated="Window_Activated"  >
+    <Grid Background="#FF173717">
+        <DataGrid  x:Name="bludazakazGrid" Margin="43,42,446,42" Background="#FFFFF2CC" BorderBrush="#FFFFF2CC" FontFamily="Bodoni MT Black" SelectionChanged="bludazakazGrid_SelectionChanged" AutoGenerateColumns="False" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header ="Название блюда" Binding ="{Binding title}"/>
+                <DataGridTextColumn Header ="Стоимость" Binding ="{Binding Price}"/>
+                <DataGridTextColumn Header ="Столик" Binding ="{Binding }"/>
+                <DataGridTextColumn Header ="Столик">
+                </DataGridTextColumn>
+            </DataGrid.Columns>
+            <DataGrid.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Добавить" Click="MenuItem_Click"/>
+                </ContextMenu>
+            </DataGrid.ContextMenu>
+        </DataGrid>
+        <StackPanel Margin="384,0,0,0" VerticalAlignment="Center" Width="373" HorizontalAlignment="Left" Height="268">
+            <Label Content="Список заказов" FontWeight="Light" Foreground="#FFF6D462" Background="#FF173717" FontFamily="Bodoni MT Black" Height="42" Width="169" FontSize="18"/>
+            <ComboBox x:Name="cmbStaff" Text="{Binding Staff}" DisplayMemberPath="FIO" Height="50" Width="331" Foreground="#FF313C2F" Background="#FFFFF2CC" FontFamily="Bodoni MT Black" RenderTransformOrigin="5.279,0.55" SelectionChanged="cmbStaff_SelectionChanged"  />
+            <StackPanel Margin="0,5" Orientation="Horizontal" HorizontalAlignment="Center"/>
+            <Button x:Name="btnAdd" Content="Добавить заказ" Padding="1,3" Margin="20,5,20,0"   Foreground="#FF313C2F" Background="#FFFFF2CC" Click="btnAdd_Click" FontSize="14" Height="46"/>
+            <Rectangle Fill="Black" HorizontalAlignment="Center" Height="1" Margin="0,20,0,10" Stroke="Black" VerticalAlignment="Top" Width="160"/>
+            <Button x:Name="btnClos" Content="Выйти" Padding="1,3" Margin="20,5,20,0"   Foreground="#FF313C2F" Background="#FFFFF2CC"  FontSize="14" Height="46" Click="btnClos_Click"/>
+
+            <StackPanel Height="25.08" Margin="0" Orientation="Horizontal" FlowDirection="RightToLeft" UseLayoutRounding="False" HorizontalAlignment="Center" />
+        </StackPanel>
+
+    </Grid>
+
+</Window>
