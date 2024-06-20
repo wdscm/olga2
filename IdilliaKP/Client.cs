@@ -22,7 +22,7 @@ namespace IdilliaKP
     
         public int ID_client { get; set; }
         public string FIO { get; set; }
-        public string Table { get; set; }
+        public int Table { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Order> Order { get; set; }

@@ -14,14 +14,14 @@
         <Button Content="Найти пользователя" HorizontalAlignment="Left" Margin="40,113,0,0" VerticalAlignment="Top" Width="244" Click="Button_Click" Foreground="#FF313C2F" Background="#FFFFF2CC" FontFamily="Bodoni MT Black" FontSize="14"/>
         <TextBox x:Name="txtName" HorizontalAlignment="Left" Height="23" Margin="38,74,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="246" Foreground="#FF313C2F" Background="#FFFFF2CC" FontFamily="Bodoni MT Black" FontSize="14" TextChanged="txtName_TextChanged" />
         <Label Content="Введите логин пользователя" HorizontalAlignment="Left" Margin="38,36,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.473,0.827" Width="246" Foreground="#FF313C2F" Background="#FFFFF2CC" FontFamily="Bodoni MT Black" FontSize="14" />
-        <DataGrid x:Name="usersGrid" HorizontalAlignment="Left" Height="208" Margin="56,166,0,0" VerticalAlignment="Top" Width="384" AutoGenerateColumns="False" FontFamily="Bodoni MT Black" FontSize="14" Background="#FFFFF2CC" SelectionChanged="usersGrid_SelectionChanged" >
+        <DataGrid x:Name="usersGrid" HorizontalAlignment="Left" Height="208" Margin="56,166,0,0" VerticalAlignment="Top" Width="384" AutoGenerateColumns="False" FontFamily="Bodoni MT Black" FontSize="14" Background="#FFFFF2CC" SelectionChanged="usersGrid_SelectionChanged" IsReadOnly="True" >
             <DataGrid.Columns>
                 <DataGridTextColumn Header ="Логин" Binding ="{Binding login}"/>
                 <DataGridTextColumn Header ="Пароль" Binding ="{Binding password}"/>
                 <DataGridTextColumn Header ="Роль" Binding ="{Binding Role.title_role}"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button Content="Добавить нового пользователя" HorizontalAlignment="Left" Margin="502,211,0,0" VerticalAlignment="Top" Width="244" Click="Button_Click_3" Foreground="#FF313C2F" Background="#FFFFF2CC" FontFamily="Bodoni MT Black" FontSize="14" RenderTransformOrigin="0.5,0.5" Height="31">
+        <Button Content="Добавить клиента" HorizontalAlignment="Left" Margin="502,231,0,0" VerticalAlignment="Top" Width="244" Foreground="#FF313C2F" Background="#FFFFF2CC" FontFamily="Bodoni MT Black" FontSize="14" RenderTransformOrigin="0.5,0.5" Height="31" Click="Button_Click_1">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -33,6 +33,16 @@
         </Button>
         <Button Content="Удалить пользователя" HorizontalAlignment="Left" Margin="503,270,0,0" VerticalAlignment="Top" Width="244" Foreground="#FF313C2F" Background="#FFFFF2CC" FontFamily="Bodoni MT Black" FontSize="14" Height="36" Click="Button_Click4"/>
         <Button x:Name="btnClos" Content="Выйти" HorizontalAlignment="Left" Margin="503,392,0,0" VerticalAlignment="Top"  Foreground="#FF313C2F" Background="#FFFFF2CC" FontFamily="Bodoni MT Black" FontSize="20" Height="32" Width="147" Grid.Column="2" Click="btnClos_Click"/>
+        <Button Content="Добавить нового пользователя" HorizontalAlignment="Left" Margin="501,194,0,0" VerticalAlignment="Top" Width="244" Click="Button_Click_3" Foreground="#FF313C2F" Background="#FFFFF2CC" FontFamily="Bodoni MT Black" FontSize="14" RenderTransformOrigin="0.5,0.5" Height="31">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="1.716"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="-0.03"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
 
     </Grid>
 </Window>

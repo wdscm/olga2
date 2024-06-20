@@ -20,20 +20,12 @@ namespace IdilliaKP
     /// </summary>
     public partial class AddUsers : Window
     {
-        private Staff u = new Staff();
-        public AddUsers(Staff _context)
+       
+        public AddUsers()
         {
             InitializeComponent();
 
-            if (_context != null)
-            {
-                u = _context;
-            }
-            cmbRole.ItemsSource = OlgaZuravlevaEntities.GetContext().Role.ToList();
-            DataContext = u;//для привязки
-
-           // DataContext = _context;
-
+           cmbRole.ItemsSource = OlgaZuravlevaEntities.GetContext().Role.ToList();
             
         }
         public bool registr = false;

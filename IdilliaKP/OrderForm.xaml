@@ -9,20 +9,21 @@
         Title="Сoздание заказа" Height="450" Width="800" Activated="Window_Activated">
     <Grid Background="#FF173717">
         <Button x:Name="btnCloce" Content="Выйти" HorizontalAlignment="Left" Margin="608,368,0,10"  Foreground="#FF313C2F" Background="#FFFFF2CC" FontFamily="Bodoni MT Black" FontSize="20" Width="164" Click="btnCloce_Click" />
-        <DataGrid x:Name="dgOrder" Margin="50,41,402,156" AutoGenerateColumns="False">
+        <DataGrid x:Name="dgOrder" Margin="25,41,402,156" AutoGenerateColumns="False" IsReadOnly="True">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Номер" Binding="{Binding ID_OrderAndSale}"/>
                 <DataGridTextColumn Header="Номер заказа" Binding="{Binding ID_Order}"/>
                 <DataGridTextColumn Header="Блюда" Binding ="{Binding Dishes.title}"/>
                 <DataGridTextColumn Header="Категория" Binding="{Binding Dishes.Category.title}"/>
+                <DataGridTextColumn Header="Столик" Binding="{Binding Client.Table}"/>
                 <DataGridTextColumn Header="Стоимость" Binding="{Binding Summ}"/>
             </DataGrid.Columns>
         </DataGrid>
-        <DataGrid x:Name="dgOrder_Копировать" Margin="424,41,28,156" AutoGenerateColumns="False">
+        <DataGrid x:Name="dgOrder_Копировать" Margin="424,41,28,156" AutoGenerateColumns="False" IsReadOnly="True">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Номер" Binding="{Binding ID_order}"/>
                 <DataGridTextColumn Header="Сотрудник" Binding ="{Binding Staff.FIO}"/>
-                <DataGridTextColumn Header="Клиент" Binding="{Binding Clietn.FIO}"/>
+                <DataGridTextColumn Header="Клиент" Binding="{Binding Client.FIO}"/>
                 <DataGridTextColumn Header="Дата" Binding="{Binding Date,StringFormat={}{0:dd.MM.yyyy HH:mm}}"/>
                 <DataGridTextColumn Header="Сумма" Binding="{Binding Summ}"/>
             </DataGrid.Columns>

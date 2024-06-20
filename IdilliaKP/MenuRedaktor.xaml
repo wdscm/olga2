@@ -16,7 +16,7 @@
         </Grid.ColumnDefinitions>
         <Image HorizontalAlignment="Left" Height="104" Margin="687,0,0,0" VerticalAlignment="Top" Width="105" Source="/photo_5334733609862553657_y (1).jpg"/>
 
-        <DataGrid x:Name="dishesGrid" AutoGenerateColumns="False" Margin="97,141,381,51" Background="#FFFFF2CC" BorderBrush="#FFFFF2CC" FontFamily="Bodoni MT Black"    >
+        <DataGrid x:Name="dishesGrid" AutoGenerateColumns="False" Margin="97,141,381,51" Background="#FFFFF2CC" BorderBrush="#FFFFF2CC" FontFamily="Bodoni MT Black" IsReadOnly="True"   >
             <DataGrid.Columns>
                 <DataGridTextColumn Header ="Название блюда" Binding ="{Binding title }"/>
                 <DataGridTextColumn Header ="Стоимость" Binding ="{Binding Price}"/>

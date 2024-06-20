@@ -48,7 +48,8 @@ namespace IdilliaKP
 
         private void btnCloce_Click(object sender, RoutedEventArgs e)//выход авторизация
         {
-           
+            MainWindow mainWindow = new MainWindow();   
+            this.Close();
         }
 
         //private void btnOrder_Click(object sender, RoutedEventArgs e)

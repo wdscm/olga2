@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="Хранилище OlgaZuravlevaModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="Хранилище OlgaZuravlevaModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Category">
           <Key>
             <PropertyRef Name="ID_category" />
@@ -18,7 +18,7 @@
           </Key>
           <Property Name="ID_client" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="FIO" Type="nchar" MaxLength="10" Nullable="false" />
-          <Property Name="Table" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="Table" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Dishes">
           <Key>
@@ -170,7 +170,8 @@
             <End Role="Staff" EntitySet="Staff" />
           </AssociationSet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="OlgaZuravlevaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -186,9 +187,9 @@
           <Key>
             <PropertyRef Name="ID_client" />
           </Key>
-          <Property Name="ID_client" Type="Int32" Nullable="false" />
+          <Property Name="ID_client" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="FIO" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
-          <Property Name="Table" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Table" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Order" Relationship="Self.FK_Order_Client1" FromRole="Client" ToRole="Order" />
         </EntityType>
         <EntityType Name="Dishes">
@@ -206,7 +207,7 @@
           <Key>
             <PropertyRef Name="ID_order" />
           </Key>
-          <Property Name="ID_order" Type="Int32" Nullable="false" />
+          <Property Name="ID_order" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="ID_staff" Type="Int32" Nullable="false" />
           <Property Name="ID_client" Type="Int32" Nullable="false" />
           <Property Name="Date" Type="DateTime" Nullable="false" Precision="7" />
@@ -219,7 +220,7 @@
           <Key>
             <PropertyRef Name="ID_OrderAndSale" />
           </Key>
-          <Property Name="ID_OrderAndSale" Type="Int32" Nullable="false" />
+          <Property Name="ID_OrderAndSale" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="ID_Dishes" Type="Int32" Nullable="false" />
           <Property Name="ID_Order" Type="Int32" Nullable="false" />
           <Property Name="Summ" Type="Double" Nullable="false" />

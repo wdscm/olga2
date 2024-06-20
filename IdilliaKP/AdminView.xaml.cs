@@ -41,7 +41,7 @@ namespace IdilliaKP
 
         private void Button_Click_3(object sender, RoutedEventArgs e)// добавить нового пользователя
         {
-            AddUsers winAdd = new AddUsers(null);
+            AddUsers winAdd = new AddUsers();
             winAdd.ShowDialog();
             winAdd.registr = true;
 
@@ -86,6 +86,12 @@ namespace IdilliaKP
         private void txtName_TextChanged(object sender, TextChangedEventArgs e)
         {
 
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            AddClient addClient = new AddClient();
+            addClient.ShowDialog();
         }
     }
 }

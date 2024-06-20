@@ -33,6 +33,7 @@ namespace IdilliaKP
             InitializeComponent();
             _context = OlgaZuravlevaEntities.GetContext();
             cmbStaff.ItemsSource = _context.Staff.ToList();
+            cmbClient.ItemsSource = _context.Client.ToList();
         }
 
 
@@ -60,7 +61,7 @@ namespace IdilliaKP
             {
                 ordreBUY = new Order
                 {
-                  ID_client = 1,
+                  ID_client = cmbClient.SelectedIndex+1,
                   ID_staff = cmbStaff.SelectedIndex+6,
                   Date = DateTime.Now,
                 };
